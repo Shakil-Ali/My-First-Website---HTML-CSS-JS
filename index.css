@@ -1,0 +1,225 @@
+/* CCS INDEX PAGE */
+
+body {
+    background-image: url(Images/night.jpg); /* Sets the background image */
+    background-size: cover; /* Ensures image fills the window */
+    background-repeat: no-repeat; /* This stops the backhground repeating */
+    position: absolute; /* Absolute positions the element relative to its first positioned (not static) ancestor element */
+    z-index: -1; /* Ensures it is behind elements which have a higher z-index value */
+    width: 100%; /* uses 100% of the width (also makes background responsive) */
+    height: 100%; /* I used 100% so the full height is used. This also makes background responsive */
+    font-size: 100%; /* Makes the font 16 pixels */
+}
+
+/* The css within the selectors below, makes sure that I dont have the problem of white showing on the sides of my websites page */
+body, html {
+    margin: 0px; /* Margin shorthand for the 4 margin side properties, can take 4 values. Margin is space outside of an element */
+    padding: 0px; /* Padding shorthand for the 4 padding side properties, can take 4 values. Padding is space inside of an element */
+    overflow-x: hidden; /* This specifies what to do with the right/left side of the content if it goes over the element's content area */
+    /* If I used overflow-y, it would specify what to do with the top/bottom side of the content if it goes over the element's content area */
+}
+
+/* @media for index page (tells browser how to display when on a different sized device) */
+/* This @media is for the different device/window-size navigation system as well as the hover sentences */
+@media screen and (max-width: 500px) {
+    .sidenav {
+        display: none; /* This stops my hoverable tabs from displaying when the screen width is less than 500px */
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .dropbtn {
+        display: none; /* This stops my drop down menu from displaying when the screen is more than 500px */
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #hoverLine {
+        display: none; /* This stops my hoverable sentence from displaying when the screen width is less than 500px */
+    }
+}
+
+@media screen and (min-width: 500px) {
+    #mHoverLine {
+        display: none; /* This stops my hoverable sentence from displaying when the screen width is less than 500px */
+    }
+}
+
+
+/* My image */
+#mylogo {
+    border-radius: 50%; /* This allows me to make my image round */
+    max-width: 30%; /* Used to set maximum width */
+    height: auto; /* Element will have flexible height */
+    display: block; /* Describes the display characteristics of an element  */
+    margin: auto; /* Takes up the available space outside an elements content area */
+    width: 50%; /* Sets width of my image, as well as making it responsive */
+    position: relative; /* Positions my image relative to the other elements on the page */
+    top: -45px; /* Brings my image closer to the top (the more negative the number the closer to the top it will move) */
+}
+
+/* Make my image scale bigger on hover */
+#mylogo:hover { 
+    transform: scale(1.1); /* This makes my image increase by a scale factor of 1.1 when it is being hovered upon */
+}
+
+/* My name on index page */
+#name {
+    color: whitesmoke; /* Colour of my name at the top of the page */
+    text-align: center; /* Alligns my name so it is in the centre */
+    font-style: oblique; /* Changes the style of my font name */
+    font-size: 9vw; /* This makes my name responsive and changes the font size when the window is resized */
+    font-weight: 500; /* Thickness of the font */
+}
+
+/* Make my name scale bigger on hover */
+#name:hover {
+    transform: scale(1.1); /* This makes my image increase by a sclae factor of 1.1 when it is being hovered upon */
+    color: whitesmoke; /* Colour of my name at the top of the page */
+}
+
+/* My hover over tabs text */
+#hoverLine {
+    color: whitesmoke; /* Colour of my hover sentence at the top of the page */
+    text-align: center; /* Alligns my hover sentence so it is in the centre */
+    font-size: 25px; /* Sets font-size for the hover sentence */
+    font-style: italic; /* Sets the font-style for the hover sentence */
+    position: relative; /* Sets the position of the hover sentence relative to the other elements on page */
+    top: -45px; /* Brings my hover sentence closer to the top (the more negative the number the closer to the top it will move) */
+}
+
+/* Make my 'hover over tabs' text scale bigger on hover */
+#hoverLine:hover {
+    color: aqua; /* Sets colour of hover sentence to aqua, when it is being hovered upon */
+    transform: scale(1.1); /* This makes my hover sentence increase by a scale factor of 1.1 when it is being hovered upon */
+}
+
+#mHoverLine {
+    color: whitesmoke; /* Colour of my hover sentence at the top of the page */
+    text-align: center; /* Alligns my hover sentence so it is in the centre */
+    font-size: 25px; /* Sets font-size for the hover sentence */
+    font-style: italic; /* Sets the font-style for the hover sentence */
+    position: relative; /* Sets the position of the hover sentence relative to the other elements on page */
+    top: -45px; /* Brings my hover sentence closer to the top (the more negative the number the closer to the top it will move) */
+}
+
+/* Make my 'hover over tabs' text scale bigger on hover */
+#mHoverLine:hover {
+    color: aqua; /* Sets colour of hover sentence to aqua, when it is being hovered upon */
+    transform: scale(1.1); /* This makes my hover sentence increase by a scale factor of 1.1 when it is being hovered upon */
+}
+
+
+/* Nav tabs */
+/* I used w3schools (https://www.w3schools.com/howto/howto_css_sidenav_buttons.asp) to help me build my side navigation bar. I looked at the code and have edited it to suit the style and mood I wish to portray. */
+
+#mySidenav a {
+    position: fixed; /* Positions nav relative to size of browser window */
+    left: -120px; /* This puts the nav tabs outside the screen */
+    transition: 0.3s; /* A transition when it hovers*/
+    padding: 15px; /* Generates space around an element */
+    width: 100px; /* This allowed me to set a certain width */
+    text-decoration: none; /* Gets rid of underline */
+    font-size: 20px; /* setting the font size of the nav */
+    font-style: italic; /* setting the style of the font on nav*/
+    font-weight: 1000; /*setting the weight of the words on nav*/
+    color: black; /* setting color of the font */
+    border-radius: 0 5px 5px 0; /* border radius is a new property I have learnt which has allowed me to make the top right and bottom right corners, rounder. */
+}
+
+#mySidenav a:hover {
+    left: 0; /* when mouse is on make element appear on screen*/
+}
+
+/* This is css for the home (index) nav tab */
+#index {
+    top: 20px; /* Calculates from the top of the browser */
+    background-color: whitesmoke; /* Sets color of nav tab */
+}
+
+/* This is css for the maternal nav tav */
+#maternal {
+    top: 80px; /* Calculates from the top of the browser */
+    background-color: whitesmoke; /* Sets color of nav tab */
+}
+
+/* This is css for the paternal nav tav */
+#paternal {
+    top: 140px; /* Calculates from the top of the browser */
+    background-color: whitesmoke; /* Sets color of nav tab */
+}
+
+/* This is css for the parents nav tav */
+#parents {
+    top: 200px; /* Calculates from the top of the browser */
+    background-color: whitesmoke; /* Sets color of nav tab */
+}
+
+/* This is css for the me nav tav */
+#me {
+    top: 260px; /* Calculates from the top of the browser */
+    background-color: whitesmoke; /* Sets color of nav tab */
+}
+
+
+/* CSS for mobile navigation */
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: whitesmoke; /* Sets the colour of the drop down button */
+    color: black; /* Colour of text in drop down button */
+    font-weight: 700; /* Sets the thickness of the font in the drop down button */
+    padding: 16px; /* Padding is the space within an elements content area, so the space within the drop down button */
+    font-size: 16px; /* Size of font in drop down button */
+    border: none; /* Sets border */
+    cursor: pointer; /*  specifies which mouse cursor to display when the mouse pointer is over an element */
+    border-bottom-right-radius: 5%; /* Rounds the bottom-right of the drop down button */
+    border-top-right-radius: 5%; /* Rounds the top-right of the drop down button */
+}
+
+/* Dropdown button on hover */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: blue; /* colour of drop down button */
+    font-weight: 1000; /* thickness of font in drop down button */
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative; /* Positions the drop down button relative to other elements on page */
+    display: inline-block; /* sets displays settings */
+}
+
+/* Dropdown Content (Hidden until clicked on) */
+.dropdown-content {
+    display: none; /* sets displays settings (display hidden until clicked on) */
+    position: absolute; /* absolute position allows element to be placed anywhere */
+    background-color: whitesmoke; /* colour of the drop down content */
+    min-width: 160px; /* sets width of drop down content box */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* used to add shadow effect to outside of content box */
+    z-index: 1; /* Puts it in front of elements with lower or no z-index value */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black; /* colour of text in content box */
+    font-weight: 700; /* thickness of text in content box */
+    padding: 12px 16px; /* sets padding (space within content box) */
+    text-decoration: none; /* sets decoration of the text */
+    display: block; /* sets block display for content box */
+}
+
+/* This changes the colour of the dropdown links background on hover */
+.dropdown-content a:hover {background-color: yellow}
+
+/* Show the dropdown menu (I used JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+/* Footer copyright */
+#homeCR {
+    color: white; /* color of text */
+    font-size: 10px; /* size of text */
+    text-align: center; /* Positions the text */
+}
+
+

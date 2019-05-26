@@ -1,0 +1,465 @@
+/* All pages css */
+
+body {
+    background-image: url(Images/trees2.jpg); /* The image here sets the background image for all the pages (except index page) */
+    background-size: cover; /* Ensures the background image fits the page */
+    background-repeat: repeat-y; /* Reapeats my background in the y aspect of the page */
+    position: absolute; /* Absolute positions the element relative to its first positioned (not static) ancestor element */
+    z-index: -1; /* Ensures it is behind elements which have a higher z-index value */
+    width: 100%; /* uses 100% of the width (also makes page responsive) */
+    height: 100%; /* uses 100% of the height (also makes page responsive) */
+    font-size: 100%; /* Makes the font 16 pixels */
+}
+
+/* The css within the selectors below, makes sure that I dont have the problem of white showing on the sides of my websites page */
+body, html {
+    height: 100%; /* uses 100% of the height (also makes page responsive) */
+    width: 100%; /* uses 100% of the width (also makes page responsive) */
+    margin: 0px; /* Margin shorthand for the 4 margin side properties, can take 4 values. Margin is space outside of an element */
+    padding: 0px; /* Padding shorthand for the 4 padding side properties, can take 4 values. Padding is space inside of an element */
+    overflow-x: hidden; /* This specifies what to do with the right/left side of the content if it goes over the element's content area */
+    /* If I used overflow-y, it would specify what to do with the top/bottom side of the content if it goes over the element's content area */
+}
+
+/* General css for all h1 tags */
+h1 {
+    text-align: center; /* Centre the text */
+    font-style: oblique; /* Style of font */
+    font-family: Verdana, Geneva, sans-serif; /* I have put other font families here, so that in the case they are unavailable on a users browser, there is a font family to fall back on. Sans-serif is a web safe font, so will be a last resort, if my other fonts are unavailable. */
+    font: 1.125em; /* 18px : 16px = 1.2em */
+}
+
+/* General css for all h3 tags */
+h3 {
+    text-align: center; /* Alligns text */
+}
+
+/* General css for all p tags */
+p {
+    text-align: center; /* Alligns text */
+    font-family: Verdana, Geneva, sans-serif; /* I have put other font families here, so that in the case they are unavailable on a users browser, there is a font family to fall back on. Sans-serif is a web safe font, so will be a last resort, if my other fonts are unavailable. */
+}
+
+/* General css for all figure tags */
+figure {
+    display: inline-block; /* I used display: inline-block instead of the float property. The inline-block value of the display property makes it easier to create a grid that fill the browser width and wraps nicely (when the browser is resized) */
+}
+
+/* General css for all figcaption tags */
+figcaption {
+    text-align: center; /* Alligns text */
+}
+
+/* @media for index page (tells browser how to display when on a different sized device) */
+/* This @media is for the different device/ window-size navigation system */
+@media screen and (max-width: 500px) {
+    .sidenav {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .dropbtn {
+        display: none;
+    }
+}
+
+
+
+
+
+/* CSS for mobile navigation */
+
+/* Dropdown Button */
+/* Dropdown Button */
+.dropbtn {
+    background-color: whitesmoke; /* Sets the colour of the drop down button */
+    color: black; /* Colour of text in drop down button */
+    font-weight: 700; /* Sets the thickness of the font in the drop down button */
+    padding: 16px; /* Padding is the space within an elements content area, so the space within the drop down button */
+    font-size: 16px; /* Size of font in drop down button */
+    border: none; /* Sets border */
+    cursor: pointer; /*  specifies which mouse cursor to display when the mouse pointer is over an element */
+    border-bottom-right-radius: 5%; /* Rounds the bottom-right of the drop down button */
+    border-top-right-radius: 5%; /* Rounds the top-right of the drop down button */
+}
+
+/* Dropdown button on hover */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: blue; /* colour of drop down button */
+    font-weight: 1000; /* thickness of font in drop down button */
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative; /* Positions the drop down button relative to other elements on page */
+    display: inline-block; /* sets displays settings */
+}
+
+/* Dropdown Content (Hidden until clicked on) */
+.dropdown-content {
+    display: none; /* sets displays settings (display hidden until clicked on) */
+    position: absolute; /* absolute position allows element to be placed anywhere */
+    background-color: whitesmoke; /* colour of the drop down content */
+    min-width: 160px; /* sets width of drop down content box */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* used to add shadow effect to outside of content box */
+    z-index: 1; /* Puts it in front of elements with lower or no z-index value */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black; /* colour of text in content box */
+    font-weight: 700; /* thickness of text in content box */
+    padding: 12px 16px; /* sets padding (space within content box) */
+    text-decoration: none; /* sets decoration of the text */
+    display: block; /* sets block display for content box */
+}
+
+/* This changes the colour of the dropdown links background on hover */
+.dropdown-content a:hover {background-color: yellow}
+
+/* Show the dropdown menu (I used JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+
+
+
+/* CSS for the main navigation tabs */
+/* I used w3schools (https://www.w3schools.com/howto/howto_css_sidenav_buttons.asp) to help me build my side navigation bar. I looked at the code and have edited it to suit the style and mood I wish to portray.*/
+
+#mySidenav a {
+    position: fixed; /* Positions the nav so that it is fixed. This means, it stays with the user while they are scrolling down the page. */
+    left: -120px; /* This puts the nav tabs outside the screen */
+    transition: 0.3s; /* A transition when it hovers*/
+    padding: 15px; /* Generates space around an element */
+    width: 100px; /* This allowed me to set a certain width */
+    text-decoration: none; /* Gets rid of underline */
+    font-size: 20px; /* setting the font size of the nav */
+    font-style: italic; /* setting the style of the font on nav*/
+    font-weight: 1000; /*setting the weight of the words on nav*/
+    color: black; /* setting color of the font */
+    border-radius: 0 5px 5px 0; /* border radius is a new property I have learnt which has allowed me to make the top right and bottom right corners, rounder. */
+    z-index: 1; /* Makes sure the nav is always on top of content when hovered over */
+}
+
+#mySidenav a:hover {
+    left: 0; /* when mouse is on make element appear on screen*/
+}
+
+/* This is css for the home (index) nav tab */
+#index {
+    top: 20px; /* Calculates from the top of the browser */
+    background-color: white; /* Sets color of nav tab */
+    
+}
+
+/* This is css for the maternal nav tav */
+#maternal {
+    top: 80px; /* Calculates from the top of the browser */
+    background-color: red; /* Sets color of nav tab */
+}
+
+/* This is css for the paternal nav tav */
+#paternal {
+    top: 140px; /* Calculates from the top of the browser */
+    background-color: yellow; /* Sets color of nav tab */
+}
+
+/* This is css for the parents nav tav */
+#parents {
+    top: 200px; /* Calculates from the top of the browser */
+    background-color: green; /* Sets color of nav tab */
+}
+
+/* This is css for the me nav tav */
+#me {
+    top: 260px; /* Calculates from the top of the browser */
+    background-color: blue; /* Sets color of nav tab */
+}
+
+/* For paragraphs and transparent box behind them*/
+div.restp {
+    margin: 30px;
+    background-color: whitesmoke; /* sets the background colour of the div box */
+    opacity: 0.6; /* Sets the opacity */
+    filter: alpha(opacity=60); /* This is for IE8 and earlier, this also ensures CSS degrades gracefully over older browsers */
+    font-weight: bold; /* Sets how thick font should be */
+    color: black; /* Sets color of text */
+    z-index: -1; /* Ensures it is behind everything with a higher z-index value */
+}
+
+
+
+
+
+
+
+
+
+/*////////////////////////////////////////////////*/
+
+/* CSS FOR MATERNAL PAGE */
+
+/* css for maternal page images */
+#ponders {
+    opacity: 0.5; /* This sets opacity */
+    filter: alpha(opacity=50); /* For IE8 and earlier, this also ensures CSS degrades gracefully over older browsers */
+    border-radius: 30% 80% 30% 30%; /* Rounds the edges of an element */
+    align-content: center; /* Positions content */
+    position: relative; /* Sets the type of positioning you want e.g. sticky */
+    left: 20px; /* To change the position of the image  */
+}
+
+#ponders:hover {
+    opacity: 1.0; /* Sets opacity */
+    filter: alpha(opacity=100);  /* For IE8 and earlier, this also ensures CSS degrades gracefully over older browsers */
+}
+    
+#aact {
+    opacity: 0.5; /* Sets opacity */
+    filter: alpha(opacity=50); /* For IE8 and earlier, this also ensures CSS degrades gracefully over older browsers */
+    border-radius: 80% 30% 30% 30%; /* Rounds the edges of an element */
+    align-content: center; /* Positions content */
+    position: relative; /* Sets the type of positioning you want e.g. sticky */
+    right: -5px; /* To change the position of the image  */
+}
+
+#aact:hover {
+    opacity: 1.0; /* Sets opacity */
+    filter: alpha(opacity=100);  /* For IE8 and earlier, this also ensures CSS degrades gracefully over older browsers */
+}
+
+
+/* css for the drag/drop js box */
+/* Red box */
+#draggable { 
+    width: 100px; /* Sets width of draggable box */
+    height: 100px; /* Sets height of draggable box */
+    padding: 0.5em; /* space outside an element */
+    float: left; /* Tells element which way to float */
+    position: relative; /* Sets the type of positioning you want e.g. sticky */
+    left: 10px; /* This allows me to position it so that it is not right on the edge of the browser window on the left side */
+    margin: 10px 10px 10px 0; /* Margin shorthand for the 4 margin side properties, can take 4 values. Margin is space outside of an element */
+    background-color: red; /* Sets color of draggable box */
+    border-color: red; /* Sets color of border of the draggable box */
+    font-weight: 1000; /* Sets the thickness of the font in the draggable box */
+    color: whitesmoke; /* Sets color of font within draggable box */
+}
+
+/* Green box */
+#droppable { 
+    width: 150px; /* Sets width of drop box */
+    height: 150px; /* Sets height of drop box */
+    padding: 0.5em; /* em is pronounced like the letter 'm' and is another unit of measurement
+    1em = 16px */
+    /* Padding shorthand for the 4 padding side properties, can take 4 values. Padding is space inside of an element */
+    float: left; /* Sets which way drop box should float */
+    margin: 10px; /* Margin shorthand for the 4 margin side properties, can take 4 values. Margin is space outside of an element */
+    background-color: green; /* Sets background color of drop box */
+    border-color: green; /* Sets color of border of drop box */
+    font-weight: 1000; /* Sets thickness of font in drop box */
+    color: whitesmoke /* Sets color of font in drop box */
+}
+
+
+
+
+
+
+
+
+/*////////////////////////////////////////////////*/
+
+/* CSS FOR PATERNAL PAGE */
+
+/* css for dialog boxes */
+.dialog {
+    color: black; /* Sets color of font */
+    font-weight: 1000; /* This sets how thick the font will be */
+}
+
+/* css for images */
+.left {
+    float: left; /* Sets which way images should float */
+    padding: 0px 20px 20px 0px; /* Padding shorthand for the 4 padding side properties, can take 4 values. Padding is space inside of an element */
+    opacity: 0.5; /* Sets the opacity */
+    filter: alpha(opacity=50); /* For IE8 and earlier, this also ensures CSS degrades gracefully over older browsers */
+    border-radius: 50%; /* Rounds the edges */
+    z-index: 1; /* Keeps it in front of elements with lower z-index values */
+}
+
+.left:hover {
+    opacity: 1.0; /* Sets the opacity */
+    filter: alpha(opacity=100);  /* For IE8 and earlier, this also ensures CSS degrades gracefully over older browsers */
+}
+
+.right {
+    float: right; /* Sets which way images should float */
+    padding: 20px 20px 20px 20px; 
+    padding: 0px 20px 20px 0px; /* Padding shorthand for the 4 padding side properties, can take 4 values. Padding is space inside of an element */
+    opacity: 0.5; /* Sets the opacity */
+    filter: alpha(opacity=50); /* For IE8 and earlier, this also ensures CSS degrades gracefully over older browsers */
+    border-radius: 50%; /* Rounds the edges */
+    z-index: 1; /* Keeps it in front of elements with lower z-index values */
+}
+
+.right:hover {
+    opacity: 1.0; /* Sets the opacity */
+    filter: alpha(opacity=100);  /* For IE8 and earlier, this also ensures CSS degrades gracefully over older browsers */
+}
+
+
+
+
+
+
+
+/*////////////////////////////////////////////////*/
+
+/* CSS FOR MY PARENTS PAGE*/
+
+/* css for images */
+
+.parFig {
+    display: inline-block;
+    opacity: 0.5; /* Sets the opacity */
+    filter: alpha(opacity=50); /* For IE8 and earlier, this also ensures CSS degrades gracefully over older browsers */
+    z-index: 1; /* Keeps it in front of elements with lower z-index values */
+}
+
+.parFig:hover {
+    opacity: 1.0; /* Sets the opacity */
+    filter: alpha(opacity=100);  /* For IE8 and earlier, this also ensures CSS degrades gracefully over older browsers */
+}
+
+/* Massala Queen image on the left */
+.parentsl {
+    float: left; /* Sets which way images should float */
+    position: relative; /* Sets the type of positioning you want e.g. sticky */
+    padding: 0px 20px 20px 0px; /* Padding shorthand for the 4 padding side properties, can take 4 values. Padding is space inside of an element */
+    opacity: 0.5; /* Sets the opacity */
+    filter: alpha(opacity=50); /* For IE8 and earlier, this also ensures CSS degrades gracefully over older browsers */
+    border-radius: 15%; /* Rounds the edges */
+    z-index: 1; /* Keeps it in front of elements with lower z-index values */
+}
+
+.parentsl:hover {
+    opacity: 1.0; /* Sets the opacity */
+    filter: alpha(opacity=100);  /* For IE8 and earlier, this also ensures CSS degrades gracefully over older browsers */
+}
+
+/* Stall image on the right */
+#stall {
+    float: right; /* Sets which way images should float */
+    padding: 0px 20px 20px 0px; /* Padding shorthand for the 4 padding side properties, can take 4 values. Padding is space inside of an element */
+    opacity: 0.5; /* Sets the opacity */
+    filter: alpha(opacity=50); /* For IE8 and earlier, this also ensures CSS degrades gracefully over older browsers */
+    border-radius: 15%; /* Rounds the edges */
+    z-index: 1; /* Keeps it in front of elements with lower z-index values */
+}
+
+#stall:hover {
+    opacity: 1.0; /* Sets the opacity */
+    filter: alpha(opacity=100);  /* For IE8 and earlier, this also ensures CSS degrades gracefully over older browsers */
+}
+
+/* css for the sortable list (Although I used code from the jquery ui website, I also edited it so that it would match my prefernces ) */
+#sortable { 
+    list-style-type: none; /* This allowed me to get rid of the bullet point, which I did not desire */
+    margin: 0; /* I made this 0 as I don't want more space outside */ 
+    padding: 0;  /* I also made this 0 as I didn't need space within  */
+    width: 100%; /* I set this to 100% because leaving it shorter made it look unprofessional */
+    text-align: center; /* Centering the text made it seem more presentable and professional than having it on the side */
+}
+
+#sortable li { 
+    margin: 0 3px 3px 3px; /* Margin shorthand for the 4 margin side properties, can take 4 values. Margin is space outside of an element */
+    padding: 0.4em; /* Padding shorthand for the 4 padding side properties, can take 4 values. Padding is space inside of an element */
+    padding-left: 1.5em; /* Sets padding on left side */
+    font-size: 1.4em; /* Sets size of font */
+    height: 18px; /* Property sets height of sortable list */
+    background-color: deeppink; /* Sets color of sortable list */
+    font-weight: 700; /* Sets weight of font in the sortable list */
+    color: white; /* Sets font color in sortable list */
+}
+
+#sortable li span { 
+    position: absolute; /* Sets the type of positioning you want e.g. sticky */
+    margin-left: -1.3em; /* Sets the margin (outside) spacing on the left */
+}
+
+
+
+
+
+
+
+
+
+
+/*////////////////////////////////////////////////*/
+
+/* CSS FOR ME PAGE */
+
+/* Slide show css */
+
+.slider-holder {
+    width: 60%; /* Instead of setting the width to 800px, I chose to give it a value of 60%, as this makes it responsive. Therefore when the size of the window changes, so do the images */
+    height: 400px; /* Instead of setting the height to a percentage, I chose to give it a value of 400px, as this makes sure that if the page is made full screen the border of the slider holder is not greater than the images. */
+    background-color: none; /* Sets background color of the slider holder (the container of the slider) */
+    margin-left: auto; /* Sets the left side margin */
+    margin-right: auto; /* Sets the right side margin */
+    margin-top: 0px; /* Sets the top side margin */
+    text-align: center; /* Positions text */
+    overflow: hidden; /* Sets what happens if content flows out of an elements box */
+    border-style: solid; /* Sets style of border */
+    border-width: 5px; /* four values will apply to the top right bottom then left side of the borders */
+}
+
+.image-holder {
+    width: 2400px; /* Sets width of image holder in slideshow */
+    background-color: none; /* Sets color of image holder */
+    height: 400px; /* Sets height of image holder(NOTE: same height as images in slideshow) */
+    clear: both; /* Clears any floating elements to the left or right of the image holder */
+    position: relative; /* Sets the type of positioning you want e.g. sticky */
+    -webkit-transition: left 1s; /* To make transition effect I need to specify the css property I want to do it to, in this case 'left'. I also have to state the duration, in this case 1 second.  */
+    -moz-transition: left 1s; /* This allows the transition to occur on mozilla browser. */
+    -o-transition: left 1s; /* This allows the transition to occur on opera browser. */
+    transition: left 1s; /* This allows the transition to occur on other browsers. */
+    /* All the transition properties above allow my slideshow to work on different browsers, as well as degrade gracefull on older ones. */
+}
+
+.slider-image {
+    float: left; /* Sets which way slider-image should float */
+    margin: 0px; /* Margin shorthand for the 4 margin side properties, can take 4 values. Margin is space outside of an element */
+    padding: 0px; /* Padding shorthand for the 4 padding side properties, can take 4 values. Padding is space inside of an element */
+    position: relative;
+}
+        
+#slider-image-1:target ~ .image-holder {
+    left: 0px; /* Positions slider-image-1 and image-holder from the left. :target allows specific selection of the id. */
+}
+
+#slider-image-2:target ~ .image-holder {
+    left: -800px; /* Positions slider-image-2 and image-holder from the left. :target allows specific selection of the id. */
+}
+        
+#slider-image-3:target ~ .image-holder {
+    left: -1600px; /* Positions slider-image-3 and image-holder from the left. :target allows specific selection of the id. */
+}
+
+/* Controls position of the 3 white position dots */
+.button-holder {
+    position: relative; /* Sets the type of positioning you want e.g. sticky */
+    top: -20px; /* Positions button holder from top */
+}
+
+/* 3 white position dots general properties */
+.slider-change {
+    display: inline-block; /* I used display: inline-block instead of the float property. The inline-block value of the display property makes it easier to create a grid that fill the browser width and wraps nicely (when the browser is resized) */
+    height: 10px; /* Selects the height of the selection dot */
+    width: 10px; /* Selects the width of the selection dot */
+    border-radius: 5px; /* This makes the selection dots round */
+    background-color: whitesmoke; /* This changes the color of the selection dots */
+}

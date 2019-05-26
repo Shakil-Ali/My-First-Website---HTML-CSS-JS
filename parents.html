@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<!-- Extensible Hypertext Markup Language is part of the family of XML markup languages. The namespace for XHTML is defined to be: -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+
+<head>
+    
+    <title>My Parents</title>
+    
+<!--    Meta data for js drop/drag area (I removed stylesheets that I did not require for this page and kept the ones that were needed for the accordion and sortable widget -->
+    <meta charset="UTF-8" content="HTML,CSS,XML,JavaScript"> <!-- Charset specifies the character encoding for the HTML document -->
+    
+<!--    Changing the viewport will mean user experience is improved, as depending on device being used, display settings will change to suit user -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<!--  This stylesheet is for the accordion -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    
+<!--  My external style sheet -->
+    <link rel="stylesheet" type="text/css" href=rest.css>
+
+<!--  Script tags for accordion and sortable list ui-widgets -->
+<!-- I got the code for the accordion from here https://jqueryui.com/accordion/ -->
+<!-- I got the code for the sortable from here https://jqueryui.com/sortable/ -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" type="text/javascript"></script>
+
+<!--    My external js page -->
+    <script src="rest.js" type="text/javascript"></script>
+
+    
+</head>
+
+    
+    
+<body>
+    
+    
+    <h1>My Parents</h1>
+
+<!--    Navigation bar-->
+    <div id="mySidenav" class="sidenav">
+      <a href="index.html" id="index">Home</a>     
+      <a href="maternal.html" id="maternal">Maternal</a>
+      <a href="paternal.html" id="paternal">Paternal</a>
+      <a href="parents.html" id="parents">My Parents</a>
+      <a href="me.html" id="me">Me</a>   
+    </div>
+    
+    <!-- Navigation bar for mobile -->
+    <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Menu</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="index.html">Home</a>
+        <a href="maternal.html" >Maternal</a>
+        <a href="paternal.html" >Paternal</a>
+        <a href="parents.html" >Parents</a>  
+        <a href="me.html" >Me</a>
+      </div>
+    </div>
+    
+<!-- I have used javascript (jquery ui-widgets) to create an accordian widget - http://jqueryui.com/accordion/ 
+I understand that by placing my h3 and p tags within a div lablled with an id called accordian, will allow them to access "accordian" properties. Because I link this page with the jquery ui library, it is able to create this widget. In addition, I have learnt that even if some browsers have not got javascript enabled, they can still view information I am displaying on my wensite.
+-->
+
+<!--    First heading, paragraphs and images -->
+    <div id="accordion">
+        <h3>Mum</h3>
+        <div class="restp">
+            <p>My mum was born on the 22nd of August 1980, in Sylhet, Bangladesh. She came to this country at a very young age and started attending Alma primary school, the local primary school. This is also the same one me and my sister attended. After completing her primary education she started secondary school at Enfield County. During her time there she completed her GCSE's, and went on to study business at Southgate and Barnet College. Before completing her studies she went to Bangladesh and got married to my dad.
+            </p>
+            
+            <figure class="parFig">
+            <img src="Images/almaprimary.jpg" alt="alma primary school" width="280" height="220">
+            <figcaption>Alma Primary School</figcaption>
+            </figure>
+            
+            <figure class="parFig">
+            <img src="Images/enfieldcounty.jpg" alt="enfield county school" width="280" height="220">
+            <figcaption>Enfield County</figcaption>
+            </figure>
+            
+            <figure class="parFig">
+            <img src="Images/southgate.jpg" alt="southgate and barmnet college" width="280" height="220">
+            <figcaption>Southgate and Barnet College</figcaption>
+            </figure>
+            
+            <p>After my mum got married she moved back to England with my dad. She started working various jobs so that she could move out of my nans. At one point she was working at a factory, packing and sorting household items. During this period she worked at 2 different factories. Later on she got a job at McDonald's, working as a customer assistant. My mum had to stop working when I was born in 1999.</p>
+        </div>
+
+        
+<!--  Second heading, paragraphs and images -->
+        <h3>Dad</h3>
+        <div class="restp">
+            <p>My dad was born on the 3rd of July 1977, and was raised in Sylhet, Bangladesh. He studied at a madrasa (a college for Islamic instruction), until the age of 16. Whilst studying he would help out with farm chores, as well as running his own stall in the local market. He primarily sold vegetables and snacks, but did also sell basic necessities. The vegetables he would sell were grown on our farm. When my dad was 20, he started helping teach the elder individuals in the village community. My dad got married to my mum on the 7th of July 1997, and moved to the UK.
+            <img src="Images/mq.jpg" alt="masala queen takeaway logo" width="300" height="250" class="parentsl">
+            <img src="Images/stall.jpg" alt="stall with food in it" width="300" height="250" id="stall">
+            </p>
+            
+            <p>After coming to England, my dad started working as a chef. He worked at a few restaurunts in his 10 years experience, and also owned his own takeaway. The takeaway was called Massala Queen. My dad sold his takeaway after a couple years and got his PCO license, and has now been working as a mini cab driver for the last 4 years.</p>
+        </div>
+
+
+<!--   Third heading, paragraph and sortable list -->
+    <h3>Activity</h3>
+     <div class="restp">
+      <p>Time for an activity! Drag the items below and see if you can put the events in order of when they happened:</p>
+         
+<!-- I have used the jquery ui website to create a sortable widget. This means that the users of my website can interact with story if they want, and try to put parts of my story in chronological order.-->
+        <ul id="sortable">
+          <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>My mum and dad got married</li>     
+          <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>I was born</li>
+          <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>My dad was born</li>
+          <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>My mum was born</li>   
+        </ul>
+     </div>
+    </div>
+
+
+<br><br> 
+<!-- I used these line breaks to leave space at the bottom of the page, as I didnt want my accordion to be right on the bottom of the screen -->
+
+    
+
+    
+</body>

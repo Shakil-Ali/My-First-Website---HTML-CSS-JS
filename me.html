@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<!-- Extensible Hypertext Markup Language is part of the family of XML markup languages. The namespace for XHTML is defined to be: -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+
+<head>
+    
+    <title>Me</title>
+    
+    <!--    Meta data for js drop/drag area (I removed stylesheets that I did not require for this page and kept the ones that were needed for the accordion and drag/drop box-->
+    <meta charset="UTF-8" content="HTML,CSS,XML,JavaScript"> <!-- Charset specifies the character encoding for the HTML document -->
+
+<!--    Changing the viewport will mean user experience is improved, as depending on device being used, display settings will change to suit user.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<!--    This changes according to device being used, to improve user experience -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<!--    This stylesheet for the accordion -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    
+<!-- My external style sheet -->
+    <link rel="stylesheet" type="text/css" href=rest.css>
+
+<!--    Script tags for dialog boxes and accordion js-->
+<!-- I got the code for the accordion from here https://jqueryui.com/accordion/ -->
+<!-- I got the code for the dialog box from here https://jqueryui.com/dialog/ -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" type="text/javascript"></script>
+
+<!--    My external js page -->
+    <script src="rest.js" type="text/javascript"></script>
+
+</head>
+
+
+    
+<body>
+    
+    
+    <h1>Me</h1>
+
+<!--    Navigation bar-->
+   <div id="mySidenav" class="sidenav">
+      <a href="index.html" id="index">Home</a>     
+      <a href="maternal.html" id="maternal">Maternal</a>
+      <a href="paternal.html" id="paternal">Paternal</a>
+      <a href="parents.html" id="parents">My Parents</a>
+      <a href="me.html" id="me">Me</a>   
+    </div>
+    
+    <!-- Navigation bar for mobile -->
+    <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Menu</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="index.html">Home</a>
+        <a href="maternal.html" >Maternal</a>
+        <a href="paternal.html" >Paternal</a>
+        <a href="parents.html" >Parents</a>  
+        <a href="me.html" >Me</a>
+      </div>
+    </div>
+
+    
+<!-- I have used javascript (jquery ui-widgets) to create an accordian widget - http://jqueryui.com/accordion/ 
+I understand that by placing my h3 and p tags within a div lablled with an id called accordian, will allow them to access "accordian" properties. Because I link this page with the jquery ui library, it is able to create this widget. In addition, I have learnt that even if some browsers have not got javascript enabled, they can still view information I am displaying on my wensite.
+-->
+
+<div id="accordion">
+<!--    First heading and paragraph -->
+    <h3>Background Information</h3>
+    <div class="restp">
+    <p>I was born in Chase Farm hospital, July 14th 1999. We lived in Ponders End, Enfield at first with my nan. After me and my parents moved to Edmonton. When I started nursery, we moved back to Ponders End. My parents originate from Bangladesh, so my ethnicity is British-Bangladeshi. My current age is 18 and I am studying a BSc in Computer Science at Goldsmiths, University of London. I have got one brother and one sister. From my mums side I have 4 uncles and 2 aunts, and from my dad's side I have 2 uncles and 7 aunts.</p>
+    </div>
+
+<!--    Second heading and paragraph -->
+    <h3>Education</h3>
+    <div class="restp">
+    <p> The primary school I attended (Alma Primary School) was also the one my mum and sister went to. I started nusery here and stayed until I finished in year 6. Later on I attended secondary school at Oasis Academy: Hadley, where I completed my GCSE's and A-levels. For GCSES's I studied and recieved: Mathematics(A), Statistics(A), Core Science(A), Additional Science(A), Triple Science(A), English Literautre(A), English Language(B), Geography(A), ICT(A), Business(B). For A-levels I studied and recieved: Mathematics(AS: A, A-level: B), Physics(C), Economics(B). I am now studying a BSc in Computer Science at Goldsmiths, University of London.</p>
+    </div>
+    
+<!--    Third heading and paragraph -->
+    <h3>Interests</h3>
+    <div class="restp">
+    <p>I am interested in sports such as cricket and football. I was captain of my schools cricket team for 3 years, and played in my school's football team for a while. I support Chelsea FC (best team in the premier league), and for cricket I mainly watch Bangladesh and England international games. My other interests include watching/reading paranormal and extra-terrestrial programs/documentaries/blogs. Futhermore, during my spare time I like to catch up on the latest technological and astronomical developments.</p>
+    </div>
+</div>
+
+<!-- I used this line break here so theres space between my slideshow and information -->
+<br><br>
+
+<!--  This is the link I used to help me build my slideshow (I used the code from the qnimate wesbite, however I edited most of it to make it responsive and suit my visualisation) - http://qnimate.com/creating-a-slider-using-html-and-css-only/#prettyPhoto  --> 
+<div class="slider-holder">
+        <span id="slider-image-1"></span>
+        <span id="slider-image-2"></span>
+        <span id="slider-image-3"></span>
+        <div class="image-holder">
+            <img src="Images/bdflag.jpg" class="slider-image" width="800" height="400" alt="bangladesh flag">
+            <img src="Images/goldsmiths.jpg" class="slider-image" width="800" height="400" alt="Goldsmiths, University of London, RHB Building">
+            <img src="Images/aliens.jpg" class="slider-image" width="800" height="400" alt="3 green aliens">
+        </div>
+        <div class="button-holder">
+            <a href="#slider-image-1" class="slider-change"></a>
+            <a href="#slider-image-2" class="slider-change"></a>
+            <a href="#slider-image-3" class="slider-change"></a>
+        </div>
+</div>
+
+    
+<!-- Dialog boxes -->
+<div class="dialog" title="Tip">
+    <p>Click on the white dots to scroll through the gallery</p>
+</div>
+
+
+<!-- I have got these line breaks here to leave room under the slideshow. This makes it look more visually appealing than having it right on the bottom of the page    -->
+<br><br>
+    
+    
+    
+</body>
